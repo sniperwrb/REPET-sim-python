@@ -103,8 +103,8 @@ def repet_sim(x, fs, par=[0,1,100]):
     voice = zi[0:t]
     return voice, accom
 
-    
-x, fs = librosa.core.load('D:\\codes\\py\\strike.wav',sr=None)
-v, a = repet_sim(x,fs)
-librosa.output.write_wav('D:\\codes\\py\\strike_voice.wav',v,fs,norm=True)
-librosa.output.write_wav('D:\\codes\\py\\strike_accom.wav',a,fs,norm=True)
+if __name__=="__main__":
+    x, fs = librosa.core.load('D:\\codes\\py\\strike.wav',sr=None)
+    v, a = repet_sim(x,fs)
+    librosa.output.write_wav('D:\\codes\\py\\strike_voice.wav',v,fs,norm=True)
+    librosa.output.write_wav('D:\\codes\\py\\strike_accom.wav',a,fs,norm=True)
